@@ -267,3 +267,78 @@ ul li:hover .submenu{
 /* } */
 
 
+/* FOOTER */
+footer {
+    color: #eeeeee;
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 0.25rem solid white;
+  }
+  footer h3 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+  footer ul {
+    padding: 0;
+  }
+  footer ul li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  .fab {
+    color: #eeeeee;
+  }
+  .usefulLinks,
+  .Icons,
+  .contactDetails {
+    margin-top: 2rem;
+  }
+  .usefulLinks a {
+    color: #eeeeee;
+    text-decoration: none;
+    line-height: 3rem;
+  }
+  .Icons a {
+    display: inline-block;
+    margin: 1em;
+    font-size: 1.5rem;
+  }
+  .footCol {
+    text-align: center;
+  }
+  .Col li {
+    text-align: left;
+  }
+  .contactDetails li{
+    display: table;
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+  span i{
+    width: 2rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  .details{
+    display: table-cell;
+  }
+  .contactDetails a{
+    color: #eeeeee;
+    text-decoration: none;
+  }
+  .copyright{
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    color: #787A91
+  }
+  footer a:hover,footer i:hover{
+    color: #787A91;
+  }
