@@ -111,15 +111,30 @@ ul li:hover .submenu{
     border: 2px solid blue;
 }
 
-.btn-home{
-    padding: 3px 8px;
-    font-weight: bold;
-    background-color: rgb(204, 74, 74);
-    color: white;
-    border-radius: 4px;
+.btn-home {
+    padding: 10px 25px;
+    border: none;
+    font-size: 25px;
+    color: #0d0d0d;
+    border-radius: 10%;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
 }
 
+.btn-home {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(228, 239, 110);
+}
 
+.btn-home:hover {
+    box-shadow: 0 0 5px rgb(255, 255, 254),
+                0 0 25px rgb(255, 255, 254),
+                0 0 50px rgb(255, 255, 253),
+                0 0 100px rgb(249, 249, 249);
+}
 .about{
     display: flex;
     justify-content: center;
