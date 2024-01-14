@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Baskerville:wght@700&family=Monoton&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +9,7 @@ body{
         background: rgb(6, 6, 78);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
+    overflow-x: hidden;
 }
 
 .main {
@@ -22,68 +22,147 @@ body{
     height: 90vh;
     position: relative;
     border: 2px solid greenyellow;
+    
 
 }
 .main .box{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     opacity: 0.65;
     background-color: black;
     position: absolute;
     top: 0;
+    display: flex; /* Use flexbox for positioning child elements */
+   justify-content: space-between; /* Add space between the logos */
+   align-items: center; /* Align items vertically */
+   padding: 0 20px; /* Add padding as needed */
 
 }
-nav{
+  
+   .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  
+.left {
+    float: left;
+    margin-right: 10px; /* Adjust the margin as needed */
+    margin-top: -5px;  
+    
+  }
+
+.left img {
+  width: 100%;
+  max-width: 180px;
+}
+
+
+
+.right {
+    float: right;
+    margin-left: 20px;
+    margin-top: 10px; /* Adjusted margin-top to move it slightly below */
+    text-align: center; /* Center align the content within the right div */
+}
+
+.right img {
+    width: 100%;
+    max-width: 100px; /* Increased max-width for a larger size */
+}
+
+.bg{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.navbar  {
     display: flex;
-    justify-content: space-between;
-    max-width: 85vw;
-    margin: auto;
+    justify-content: center;
     align-items: center;
     height: 100px;
-    font-size: 20px;
-    border: 2px solid rgb(248, 131, 190);
-    
+    margin: 0;
+    padding: 0;
 }
-.navbar li{
+
+.navbar li {
     display: inline-block;
     color: white;
+    margin: 0 20px;
+}
 
-}
-.navbar li a{
-    color: white;
+.menu {
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 23px 30px;
+    padding: 30px 20px; 
     position: relative;
+    text-align: center;
     z-index: 10;
-    border: 2px solid red;
-    /* font-size: 20px; */
+    font-size: 30px; /* Adjusted font size */
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
     color: rgb(104, 250, 250);
 }
+
 nav img{
     color: white;
     position: relative;
     z-index: 10;
-}
+} 
 
-ul .submenu{
+@media screen and (max-width: 768px) {
+    .right img {
+      display: none; /* Hide the WIE logo on smaller screens */
+    }
+  }
+
+
+ul .submenu {
     position: absolute;
-    width: 200px;
+    width: 450px;
     color: white;
-    box-shadow: 0 20px 45px #00000020;
-    margin-top: -50px;
+    background-color: #333; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: -10px; 
     opacity: 0;
     z-index: -999;
-    font-size: 10px;
+    font-size: 16px; 
     transition: all ease 0.3s;
+    padding: 5px 10px ; 
+    display: flex;
+    text-align: left; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-top: -15px;
 }
 
-ul li:hover .submenu{
+ul li:hover .submenu {
     z-index: 99;
     opacity: 1;
     margin-top: 0;
 }
+
+
+/* Ensure that the submenu is above other elements when visible */
+ul li:hover .submenu {
+    z-index: 999;
+}
+
+/* Style the submenu items */
+ul .submenu a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 0px;
+    
+    transition: background-color ease 0.3s;
+}
+
+ul .submenu a:hover {
+    background-color: #2f303000;
+}
+
 .hero{
     font-family: 'Cute Font', 'Rubik Doodle Shadow','sans-serif';
     height: 85%;
@@ -111,15 +190,30 @@ ul li:hover .submenu{
     border: 2px solid blue;
 }
 
-.btn-home{
-    padding: 3px 8px;
-    font-weight: bold;
-    background-color: rgb(204, 74, 74);
-    color: white;
-    border-radius: 4px;
+.btn-home {
+    padding: 10px 25px;
+    border: none;
+    font-size: 25px;
+    color: #0d0d0d;
+    border-radius: 10%;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
 }
 
+.btn-home {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(228, 239, 110);
+}
 
+.btn-home:hover {
+    box-shadow: 0 0 5px rgb(255, 255, 254),
+                0 0 25px rgb(255, 255, 254),
+                0 0 50px rgb(255, 255, 253),
+                0 0 100px rgb(249, 249, 249);
+}
 .about{
     display: flex;
     justify-content: center;
@@ -176,16 +270,16 @@ ul li:hover .submenu{
     /* border: 2px solid red; */
 }
 
-@media screen and (min-width:568px) {
+@media screen and (min-width:500px) {
     .cards-wrapper{
         display: flex;
     }
     .card{
-        margin: 0 0.5em;
+        margin: 0 1.5em;
         width: calc(100%/3);
     }
     .image-wrapper{
-        height: 21vw;
+        height: 18vw;
         /* margin: 0 auto; */
     }
 
